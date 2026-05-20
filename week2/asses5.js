@@ -1,4 +1,3 @@
-
 // ASSIGNMENT 5: 
 // -------------
 // Bank Transaction Analyzer
@@ -14,18 +13,22 @@ const transactions = [
 ];
 
 // Tasks:
-//     1. filter() all credit transactions
+//1. filter() all credit transactions
 const re1=transactions.filter(obj=>obj.type=="credit")
 console.log(re1)
-//     2. map() to extract only transaction amounts
+
+//2. map() to extract only transaction amounts
 const re2=transactions.map(obj=>obj.amount)
 console.log(re2)
-//     3. reduce() to calculate final account balance
+
+//3. reduce() to calculate final account balance
 const balance=transactions.reduce((acc,m)=>m.type=="credit"?acc+m.amount:acc-m.amount,0)
 console.log(balance)
-//     4. find() the first debit transaction
+
+//4. find() the first debit transaction
 const f=transactions.find(obj=>obj.type=="debit")
 console.log(f)
-//     5. findIndex() of transaction with amount 10000
+
+//5. findIndex() of transaction with amount 10000
 const fi=transactions.findIndex(obj=>obj.amount==10000)
 console.log(fi)

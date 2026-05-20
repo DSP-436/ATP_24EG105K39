@@ -1,3 +1,7 @@
+// Insert new Emp at 2nd position
+// Remove an emp with name "Kiran"
+// 3.Change the last mark 95 to 75 of emp  "Sneha"
+
 const employees = [
   {
     eno: 101,

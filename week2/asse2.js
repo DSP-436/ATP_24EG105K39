@@ -25,12 +25,12 @@ console.log(re1)
 //else → D
 const grade=students.map(obj=>obj.marks>=90?'A':obj.marks>=75?'B':obj.marks>=75?'C':'D')
 console.log(grade)
-//    3. reduce() to calculate average marks
+//3. reduce() to calculate average marks
 const avg=students.reduce((acc,m)=>acc+m.marks/students.length,0)
 console.log(avg)
-//    4. find() the student who scored 92
+//4. find() the student who scored 92
 const f=students.find(obj=>obj.marks==92)
 console.log(f)
-//    5. findIndex() of student "Kiran"
+//5. findIndex() of student "Kiran"
 const fi=students.findIndex(obj=>obj.name=='Kiran')
 console.log(fi)

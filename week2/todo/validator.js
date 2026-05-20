@@ -5,18 +5,23 @@
 function validateTitle(title) {
     //  Your code here
     if(!title)
+    {
         return "title is empty"
+    } 
     if(title.length<3)
+    {
         return "invalid title"
-    return true
     }
+    return true
+}
                       
 // 2. Validate priority (must be: low, medium, high)
     function validatePriority(priority) {
         // Your code here
         const priorities=['low','medium','high']
-        if(priority.isLowercase==priorities.includes)
+        if(priority.isLowercase==priorities.includes){
             return true
+        }
         return "invalid priority"
     }
                       
@@ -25,9 +30,10 @@ function validateTitle(title) {
         // Your code here
         const inDate=new date(date)
         const today=new date()
-        if(inDate<=today)
-        return 'invalid duedate';
-    return true
+        if(inDate<=today){
+            return 'invalid duedate';
+        }
+        return true
     }
 
 export {validateTitle,validatePriority,validateDueDate}

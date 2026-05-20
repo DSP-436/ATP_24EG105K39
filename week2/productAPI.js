@@ -4,21 +4,22 @@ export const productApp=exp.Router()
 //create reqs for
 //create product API with below operations
 let products=[]
-   productApp.get('/products',(req,res)=>{
-    //send res to client
-    res.json({message:"all products",payload:products})
-   })
+productApp.get('/products',(req,res)=>{
+   //send res to client
+   res.json({message:"all products",payload:products})
+})
 
-   productApp.get('/products/:brand',(req,res)=>{
-    //get brand from product from url parametr
-      let brandOfURL=req.params.brand
-      //find product
-      let product=products.find(productObj=>productObj.brand==brandOfURL)
-      //if product not found
-      if(product==undefined)
-         return res.json({message:"product not found"})
-      res.json({message:"product:",payload:product})
-   })
+productApp.get('/products/:brand',(req,res)=>{
+   //get brand from product from url parametr
+   let brandOfURL=req.params.brand
+   //find product
+   let product=products.find(productObj=>productObj.brand==brandOfURL)
+   //if product not found
+   if(product==undefined){
+      return res.json({message:"product not found"})
+   }
+   res.json({message:"product:",payload:product})
+})
    
    //route to handle POST request of client
    productApp.post('/products',(req,res)=>{

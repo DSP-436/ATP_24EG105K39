@@ -14,21 +14,23 @@ const movies = [
 ];
 
 // Tasks:
-//     1. filter() only "Sci-Fi" movies
+//1. filter() only "Sci-Fi" movies
 const sciFi=movies.filter(obj=>obj.genre=="Sci-Fi")
 console.log(sciFi)
 
-//     2. map() to return:
-//             "Inception (8.8)"
+//2. map() to return:
+//"Inception (8.8)"
 const r1=movies.map(obj=>obj.title=="Inception"?obj.title+obj.rating:"")
 console.log(r1)
 
-//     3. reduce() to find average movie rating
+//3. reduce() to find average movie rating
 const avg=movies.reduce((acc,m)=>acc+m.rating/movies.length,0)
 console.log(avg)
-//     4. find() movie "Joker"
+
+//4. find() movie "Joker"
 const f=movies.find(obj=>obj.title=="Joker")
 console.log(f)
-//     5. findIndex() of "Avengers"
+
+//5. findIndex() of "Avengers"
 const fi=movies.findIndex(obj=>obj.title=='Avengers')
 console.log(fi)
