@@ -1,17 +1,47 @@
-# Week 3
+1.Generate package.json
+   npm init -y
+2.Create expresss server
+3.Install mongoose and connect to MongoDB server
+  
 
-This folder contains a complete backend project for week 3.
-The focus is on building a robust REST API using Express and MongoDB.
+      Rest Api  ----MongoDB native driver  ---> DB Server
+      Rest Api  ----Mongoose ODM(object doc mapping) tool      ---> DB Server
 
-## Features
-- Product API: Managing a product catalog.
-- Add products to cart, increment quantities.
-- Product Models: Mongoose schemas for User and Product data.
+4.Build USER REST API
+              - Create User
+              -Read all users
+              -Read a User by ID
+              -Update a User by ID
+              -Delete a User by ID
 
-## Initial Steps
-1. Generate package.json
-2. Create express server
-3. Install mongoose and connect to mongodb server
-4. Build USER rest-API (create, update, read all, read by id, delete)
-5. Create schema and model of the resource
-6. Create user api and define routes
+5.Create Schema and Model of the Resource(User)
+
+### user authentication(login)
+  -submit credentials and get token
+
+  
+  -public routes(by anyone)
+  -protected routes(by authenticated users only)
+      req-->middleware-->routes
+              to access cookies property of req obj we need cookie parser middle ware
+                other wise req.cookies is undifiened   
+                --npm i cookie-parser
+  xss-cross site script
+  CSRF
+  lax(relaxed ristriction)
+
+
+cross origon works on same origon
+cross origon req means when the client n server applications are running in different domains
+same origon req means the client also running on same domain of the server
+cookies will send along with req automatically in same origon req
+but for cross origon req,the token should be explicitilly inclluded to the req
+
+
+
+folder-controllers
+export const createUser=async=>  //routes
+
+
+//create-user.controller.js
+//user.route.js
