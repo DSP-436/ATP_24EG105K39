@@ -1,4 +1,4 @@
-# Week 2
+Week 2
 
 This folder contains assignments and projects for week 2.
 The focus is on advanced array methods, shopping cart simulation, and building a basic backend structure.
